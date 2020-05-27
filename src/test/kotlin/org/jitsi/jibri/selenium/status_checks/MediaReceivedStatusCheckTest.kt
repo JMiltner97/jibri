@@ -49,7 +49,7 @@ class MediaReceivedStatusCheckTest : ShouldSpec() {
                     }
                 }
                 "after the clients-muted timeout" {
-                    clock.elapse(Duration.ofMinutes(15))
+                    clock.elapse(Duration.ofMinutes(75))
                     should("report an empty call") {
                         check.run(callPage) shouldBe SeleniumEvent.CallEmpty
                     }
@@ -73,7 +73,7 @@ class MediaReceivedStatusCheckTest : ShouldSpec() {
                     }
                 }
                 "after the no-media timeout" {
-                    clock.elapse(Duration.ofSeconds(45))
+                    clock.elapse(Duration.ofSeconds(3700))
                     should("report a no media error") {
                         check.run(callPage) shouldBe SeleniumEvent.NoMediaReceived
                     }
