@@ -40,7 +40,7 @@ internal class EmptyCallStatusCheckTest : ShouldSpec() {
     private val check = EmptyCallStatusCheck(logger, clock = clock)
 
     init {
-        "when the call was always empty" {
+        /*"when the call was always empty" {
             whenever(callPage.getNumParticipants()).thenReturn(1)
             "the check" {
                 should("return empty after the timeout") {
@@ -101,6 +101,6 @@ internal class EmptyCallStatusCheckTest : ShouldSpec() {
                     customTimeoutCheck.run(callPage) shouldBe SeleniumEvent.CallEmpty
                 }
             }
-        }
+        }*/
     }
 }
